@@ -21,4 +21,9 @@ class Product:
    def change_price(self, amount):
        self.price += amount
        print(f"price changed to {self.price}")
-    #    updates the pricesof the product of the procduct by adding.
+
+    # updates the pricesof the product of the procduct by adding.
+product1 = Product("Skumawiki", 50, "green and fresh", 10)
+product1.put_price(55)
+product1.give_discount()
+product1.change_price(60)
