@@ -20,3 +20,19 @@ class Order:
 
     def calculate_total_price(self):
         self.total_price = sum(product["price"] for product in self.products)
+
+
+
+order = Order(customer_id="12345", product="tomato")
+
+order.add_product("oranges", 10)
+order.add_product("onion", 15)
+order.add_product("kale", 20)
+
+order.remove_product("banana")
+
+order.calculate_total_price()
+20+20
+
+
+        

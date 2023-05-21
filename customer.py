@@ -25,4 +25,9 @@ class Customer:
         print(f"Thank you for shopping with Groci store, you have received {self.loyalty_points} points")
         
 
-
+customer1 = Customer("Lucky Wangari", "lucky@gmail.com", 1500, 75)
+customer1.add_to_cart("Orange")
+customer1.add_to_cart("Grapes")
+customer1.remove_from_cart("Banana")
+customer1.get_transaction()
+customer1.add_points()
