@@ -1,21 +1,25 @@
 class Customer:
-    shop = "Groci_store"
-    def __init__(self,name, email, transaction,loyalty_points):
-        self.name = name
+    def __init__(self, first_name, second_name, email):
+        self.first_name = first_name
+        self.second_name = second_name
         self.email = email
-        self.transaction = transaction
-        self.loyalty_points = loyalty_points
-        self.cart = []
+        self.password = []
     def signup():
-        name = input("Enter your name: ")
+        first_name = input("Enter your first name: ")
+        second_name = input("Enter your second name: ")
         email = input("Enter your email: ")
-        transaction = input("Enter your transaction ID: ")
-        loyalty_points = (input("Enter your loyalty points: "))
-        return Customer(name, email, transaction, loyalty_points)
+        password = input("Enter password: ")
+        confirm_password = input("Confirm password: ")
+        while password != confirm_password:
+            print("Passwords does not match: ")
+            password = input("Enter password: ")
+            confirm_password = input("Confirm password: ")
+        return Customer(first_name, second_name, email)
     def login():
         email = input("Enter your email: ")
-        return Customer("",email,)
+        password = input("Enter password: ")
+        return Customer("", email, password)
 customer1 = Customer.signup()
-print(f"Sign up successful for {customer1.name}. Welcome to {customer1.shop}!")
+print(f"Sign up successful for {customer1.first_name}. Welcome to Groci store!")
 customer2 = Customer.login()
-print(f"Login successful for {customer2.name}. Welcome back to {customer2.shop}!")
+print(f"Login successful for {customer2.email}. Welcome back to Groci store!")
