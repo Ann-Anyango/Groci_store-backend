@@ -1,9 +1,10 @@
 class Customer:
-    def __init__(self, first_name, second_name, email):
+    def __init__(self, first_name, second_name, email, password, confirm_password):
         self.first_name = first_name
         self.second_name = second_name
         self.email = email
-        self.password = []
+        self.password = password
+        self.confirm_password = confirm_password
     def signup():
         first_name = input("Enter your first name: ")
         second_name = input("Enter your second name: ")
@@ -14,11 +15,11 @@ class Customer:
             print("Passwords does not match: ")
             password = input("Enter password: ")
             confirm_password = input("Confirm password: ")
-        return Customer(first_name, second_name, email)
+        return Customer(first_name, second_name, email, password, confirm_password)
     def login():
         email = input("Enter your email: ")
         password = input("Enter password: ")
-        return Customer("", email, password)
+        return Customer(email,password)
 customer1 = Customer.signup()
 print(f"Sign up successful for {customer1.first_name}. Welcome to Groci store!")
 customer2 = Customer.login()
