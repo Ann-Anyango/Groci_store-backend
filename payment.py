@@ -11,6 +11,8 @@ class Payment:
             return f"Your balance is {self.balance} shillings. You cannot purchase oranges."
     def payment_statement(self, amount):
         return f"Payment of {amount} shillings was made on {self.date}. Remaining balance is {self.balance} shillings"
+loyalty_points = (input("Enter your loyalty points: "))
+
 # first Instance
 payment1 = Payment("2023-05-21", 1000)
 print(payment1.process_payment(700))
