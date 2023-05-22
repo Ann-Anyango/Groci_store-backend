@@ -6,28 +6,18 @@ class Customer:
         self.transaction = transaction
         self.loyalty_points = loyalty_points
         self.cart = []
-    
-    def add_to_cart(self,item):
-        self.cart.append(item)
-        print(f"{self.cart}")
-        
-    def remove_from_cart(self, item):
-        if item in self.cart:
-            self.cart.remove(item)
-            print(f"Item {item} removed from cart.")
-        else:
-            print(f"Item {item} not found in cart.")
-
-    def get_transaction(self):
-        print (f"Trasaction for {self.name} of {self.transaction} is successful ")
-        
-    def add_points(self):
-        print(f"Thank you for shopping with Groci store, you have received {self.loyalty_points} points")
-        
-
-customer1 = Customer("Lucky Wangari", "lucky@gmail.com", 1500, 75)
-customer1.add_to_cart("Orange")
-customer1.add_to_cart("Grapes")
-customer1.remove_from_cart("Banana")
-customer1.get_transaction()
-customer1.add_points()
+    def signup():
+        name = input("Enter your name: ")
+        email = input("Enter your email: ")
+        transaction = input("Enter your transaction ID: ")
+        loyalty_points = (input("Enter your loyalty points: "))
+        return Customer(name, email, transaction, loyalty_points)
+    def login():
+        email = input("Enter your email: ")
+        transaction = input("Enter your transaction ID: ")
+        loyalty_points = (input("Enter your loyalty points: "))
+        return Customer("",email, transaction, loyalty_points)
+customer1 = Customer.signup()
+print(f"Sign up successful for {customer1.name}. Welcome to {customer1.shop}!")
+customer2 = Customer.login()
+print(f"Login successful for {customer2.name}. Welcome back to {customer2.shop}!")
