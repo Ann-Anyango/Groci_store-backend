@@ -14,9 +14,7 @@ class Customer:
         return Customer(name, email, transaction, loyalty_points)
     def login():
         email = input("Enter your email: ")
-        transaction = input("Enter your transaction ID: ")
-        loyalty_points = (input("Enter your loyalty points: "))
-        return Customer("",email, transaction, loyalty_points)
+        return Customer("",email,)
 customer1 = Customer.signup()
 print(f"Sign up successful for {customer1.name}. Welcome to {customer1.shop}!")
 customer2 = Customer.login()
